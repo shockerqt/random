@@ -4,7 +4,7 @@ import { gameScenes } from "./GameData";
 
 export const Rol: React.FC = () => {
   const [currentSceneId, setCurrentSceneId] = useState<string>("intro");
-  const [history, setHistory] = useState<string[]>(["intro"]); // Para un posible botón de "atrás" o reinicio
+  const [history, setHistory] = useState<string[]>(["intro"]);
 
   const currentScene = gameScenes[currentSceneId];
 
@@ -40,6 +40,18 @@ export const Rol: React.FC = () => {
         <h1 className="text-4xl font-extrabold text-white mb-6 text-center">
           {currentScene.title}
         </h1>
+
+        {/* Aquí es donde se muestra la imagen */}
+        {currentScene.imageSrc && (
+          <div className="mb-6 rounded-lg overflow-hidden shadow-md">
+            <img
+              src={currentScene.imageSrc}
+              alt={currentScene.title}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        )}
+
         <p className="text-lg leading-relaxed text-gray-300 whitespace-pre-line mb-8">
           {currentScene.text}
         </p>
@@ -50,9 +62,6 @@ export const Rol: React.FC = () => {
               key={index}
               onClick={() => handleChoice(choice.nextSceneId)}
               className="bg-indigo-700 hover:bg-indigo-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={
-                currentScene.isEnding && choice.nextSceneId === currentScene.id
-              } // Evita clickear en "Volver a jugar" si ya es un final y la única opción es esa
             >
               {choice.text}
             </button>

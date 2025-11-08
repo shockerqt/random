@@ -3,7 +3,7 @@
 export type Choice = {
   text: string;
   nextSceneId: string;
-  consequence?: string; // Para mostrar un resumen de la decisión
+  consequence?: string;
 };
 
 export type Scene = {
@@ -12,5 +12,6 @@ export type Scene = {
   text: string;
   choices: Choice[];
   isEnding?: boolean;
-  endingType?: "good" | "bad" | "neutral"; // Para diferenciar los finales
+  endingType?: "good" | "bad" | "neutral";
+  imageSrc: string; // <-- ¡Añadido aquí!
 };

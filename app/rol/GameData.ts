@@ -1,4 +1,3 @@
-// GameData.ts
 import { type Scene } from "./types";
 
 export const gameScenes: { [key: string]: Scene } = {
@@ -19,6 +18,7 @@ export const gameScenes: { [key: string]: Scene } = {
         nextSceneId: "compositionFocus",
       },
     ],
+    imageSrc: "/images/intro.png",
   },
   yueArrival: {
     id: "yueArrival",
@@ -41,6 +41,7 @@ export const gameScenes: { [key: string]: Scene } = {
         consequence: "Rechaza la hamburguesa",
       },
     ],
+    imageSrc: "/images/yue_arrival.png",
   },
   compositionFocus: {
     id: "compositionFocus",
@@ -61,6 +62,7 @@ export const gameScenes: { [key: string]: Scene } = {
     ],
     isEnding: true,
     endingType: "good",
+    imageSrc: "/images/composition_focus.png",
   },
   acceptBurger: {
     id: "acceptBurger",
@@ -80,6 +82,7 @@ export const gameScenes: { [key: string]: Scene } = {
         consequence: "Zavier elige la tentación",
       },
     ],
+    imageSrc: "/images/accept_burger.png",
   },
   declineBurger: {
     id: "declineBurger",
@@ -100,6 +103,7 @@ export const gameScenes: { [key: string]: Scene } = {
     ],
     isEnding: true,
     endingType: "good",
+    imageSrc: "/images/decline_burger.png",
   },
   badPathPart1: {
     id: "badPathPart1",
@@ -118,6 +122,7 @@ export const gameScenes: { [key: string]: Scene } = {
         consequence: "Zavier se distrae del arte",
       },
     ],
+    imageSrc: "/images/bad_path_part1.png",
   },
   goodEnding: {
     id: "goodEnding",
@@ -131,6 +136,7 @@ export const gameScenes: { [key: string]: Scene } = {
     choices: [{ text: "Volver a jugar", nextSceneId: "intro" }],
     isEnding: true,
     endingType: "good",
+    imageSrc: "/images/good_ending.png",
   },
   badEnding: {
     id: "badEnding",
@@ -145,5 +151,6 @@ export const gameScenes: { [key: string]: Scene } = {
     choices: [{ text: "Volver a jugar", nextSceneId: "intro" }],
     isEnding: true,
     endingType: "bad",
+    imageSrc: "/images/bad_ending.png",
   },
 };
