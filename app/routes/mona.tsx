@@ -3,8 +3,8 @@ import mona from "../mona.webp";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Mona" },
+    { name: "description", content: "Una mona bailando" },
   ];
 }
 
