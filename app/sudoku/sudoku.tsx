@@ -111,8 +111,6 @@ export const SudokuBoard: React.FC<SudokuBoardProps> = ({
                   selectedCell?.row === rowIndex &&
                   selectedCell?.col === colIndex
                 }
-                row={rowIndex}
-                col={colIndex}
               />
             </div>
           ))}

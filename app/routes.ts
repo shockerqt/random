@@ -4,4 +4,5 @@ export default [
   index("routes/home.tsx"),
   route("mona", "routes/mona.tsx"),
   route("sudoku", "routes/sudoku.tsx"),
+  route("rol", "routes/rol.tsx"),
 ] satisfies RouteConfig;
